@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Homemade Dessert House</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,700,900" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700" rel="stylesheet" />
+    <!-- Core theme CSS -->
+    <link href="css/styles.css" rel="stylesheet" />
+    <style>
+      .navbar-nav .nav-link { font-family: '一點明體', sans-serif; font-size: 25px; color: #FFBD9D !important; letter-spacing: 1px; }
+      .navbar-nav .nav-link:hover { color: #FFFFFF !important; }
+      .row { display: flex; flex-wrap: wrap; justify-content: space-between; }
+      .col-md-3 { width: 23%; margin-bottom: 30px; }
+      .card { border: 1px solid #ddd; border-radius: 10px; overflow: hidden; transition: 0.3s; background: #fff; padding-bottom: 10px; }
+      .card img { width: 100%; height: 150px; object-fit: cover; }
+      .card p { text-align: center; font-weight: bold; margin: 10px 0; }
+      .card button { display: block; margin: 0 auto 10px auto; padding: 5px 10px; background: #FFBD9D; border: none; border-radius: 5px; cursor: pointer; }
+      .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); }
+      .modal-content { background: #fff; max-width: 500px; margin: 10% auto; border-radius: 10px; padding: 20px; }
+      .modal-content h4, .modal-content h5 { margin: 10px 0; }
+      .modal-content ul { list-style: none; padding: 0; }
+      .modal-content li { margin: 5px 0; }
+      
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 class="site-heading text-center text-faded d-none d-lg-block">
+        <span class="site-heading-upper text-primary mb-3" style="font-family: '華康粗明體', sans-serif;">HOMEMADE</span><br>
+        <span class="site-heading-lower" style="font-family: '華康特粗楷體', sans-serif;">Dessert House</span>
+      </h1>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+      <div class="container">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="index.html">主頁</a></li>
+            <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="about.html">看食譜</a></li>
+            <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="products.html">買食材</a></li>
+            <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="store.html">分享</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="page-section py-5">
+      <div class="container">
+        <h2 class="text-center mb-5" style="font-family: '華康特粗楷體', sans-serif;font-size: 60px;">Sweets</h2>
+
+        <div class="row">
+          <!-- 第一行四個甜點 -->
+          <div class="col-md-3 card">
+            <img src="https://cdn.glitch.global/b6601bf8-3413-4193-9758-3707f521f417/%E5%A5%B6%E9%85%AA.jpg?v=1745571084528" alt="甜點1">
+            <p>奶酪 Panna cotta</p>
+            <button onclick="openModal(1)">點擊看食譜</button>
+          </div>
+          <div class="col-md-3 card">
+            <img src="https://cdn.glitch.global/b6601bf8-3413-4193-9758-3707f521f417/%E5%B7%B4%E6%96%AF%E5%85%8B%E8%9B%8B%E7%B3%95.jpg?v=1745571026127" alt="甜點2">
+            <p>巴斯克起司蛋糕 Basque cheesecake</p>
+            <button onclick="openModal(2)">點擊看食譜</button>
+          </div>
+          <div class="col-md-3 card">
+            <img src="https://cdn.glitch.global/b6601bf8-3413-4193-9758-3707f521f417/%E5%B7%A7%E5%85%8B%E5%8A%9B%E9%A4%85%E4%B9%BE.jpg?v=1745571128937" alt="甜點3">
+            <p>巧克力豆餅乾 Chocolate chip cookie</p>
+            <button onclick="openModal(3)">點擊看食譜</button>
+          </div>
+          <div class="col-md-3 card">
+            <img src="https://cdn.glitch.global/b6601bf8-3413-4193-9758-3707f521f417/%E5%B8%83%E6%9C%97%E5%B0%BC.jpg?v=1745571131387" alt="甜點4">
+            <p>布朗尼 Brownie</p>
+            <button onclick="openModal(4)">點擊看食譜</button>
+          </div>
+        </div>
+        <div class="row">
+          <!-- 第二行四個甜點 -->
+          <div class="col-md-3 card">
+            <img src="https://cdn.glitch.global/b6601bf8-3413-4193-9758-3707f521f417/%E6%9D%AF%E5%AD%90%E8%9B%8B%E7%B3%95.jpg?v=1745571132355" alt="甜點5">
+            <p>杯子蛋糕 Cup cake</p>
+            <button onclick="openModal(5)">點擊看食譜</button>
+          </div>
+          <div class="col-md-3 card">
+            <img src="https://cdn.glitch.global/b6601bf8-3413-4193-9758-3707f521f417/%E8%9B%8B%E5%A1%94.jpg?v=1745571136028" alt="甜點6">
+            <p>蛋塔 Egg tart</p>
+            <button onclick="openModal(6)">點擊看食譜</button>
+          </div>
+          <div class="col-md-3 card">
+            <img src="https://cdn.glitch.global/b6601bf8-3413-4193-9758-3707f521f417/%E7%84%A6%E7%B3%96%E7%83%A4%E5%B8%83%E4%B8%81.jpg?v=1745571136344" alt="甜點7">
+            <p>焦糖烤布丁 Crème Caramel</p>
+            <button onclick="openModal(7)">點擊看食譜</button>
+          </div>
+          <div class="col-md-3 card">
+            <img src="https://cdn.glitch.global/b6601bf8-3413-4193-9758-3707f521f417/%E9%AC%86%E9%A4%85.jpg?v=1745571142809" alt="甜點8">
+            <p>鬆餅 Pancake</p>
+            <button onclick="openModal(8)">點擊看食譜</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 食譜模態框 -->
+    <div id="recipeModal" class="modal">
+      <div class="modal-content">
+        <h4 id="modalTitle">食譜</h4>
+        <h5>食材</h5>
+        <ul id="ingredients"></ul>
+        <h5>步驟</h5>
+        <div id="steps"></div>
+        <button onclick="closeModal()">關閉</button>
+      </div>
+    </div>
+
+    <footer class="footer text-center py-5">
+      <div class="container"><p class="m-0 small">© Dessert House 2025</p></div>
+    </footer>
+
+    <script>
+      const recipes = {
+        1: { title:'奶酪 Panna cotta', ingredients:['動物性鮮奶油250克','牛奶250克','細砂糖50克','吉利丁4片','白蘭地酒3克','香草豆莢1／4條','水果適量'], steps:['步驟1：先將吉利丁片泡在冰水中，等候變軟後擠乾水分。','步驟2：將香草莢中的籽刮出，如此香草莢中的香氣才能更快散發。','步驟3：香草籽連同香草莢、牛奶及細砂糖等倒入鍋中，以中小火煮至糖融化。','步驟4：關火後，將吉利丁加入鍋中攪拌，至吉利丁完全融解。最後加入鮮奶油與白蘭地酒，將所有食材混合均勻。','步驟五：將香草豆莢夾起，奶酪漿倒入模中，放置冰箱冷藏至凝結即可。','步驟六：待奶酪凝結後，上面可以放些水果做裝飾。完成。'] },
+        2: { title:'巴斯克起司蛋糕 Basque cheesecake', ingredients:['奶油乳酪250克','細砂糖150克','蛋3顆','鮮奶油200ml','香草精1小匙','麵粉20克'], steps:['步驟1：預熱烤箱至200°C，準備烤盤並鋪上烘焙紙。','步驟2：將奶油起司與糖混合攪拌至順滑。','步驟3：加入雞蛋、鮮奶油和香草精，繼續攪拌均勻。','步驟4：加入麵粉，攪拌至麵糊光滑，然後倒入烤盤中。','步驟5：將蛋糕放入烤箱，烤約50分鐘。'] },
+        3: { title:'巧克力豆餅乾 Chocolate chip cookie', ingredients:['低筋麵粉250克','無鹽奶油150克','細砂糖100克','紅糖100克','雞蛋1顆','巧克力豆150克'], steps:['步驟1：將奶油與糖打發至膨脹，加入雞蛋攪拌均勻。','步驟2：篩入麵粉，拌勻，加入巧克力豆攪拌。','步驟3：將麵團分成小球，放在烤盤上，預熱烤箱至180°C，烤10-12分鐘。'] },
+        4: { title:'布朗尼 Brownie', ingredients:['黑巧克力200克','無鹽奶油100克','細砂糖150克','蛋2顆','低筋麵粉100克'], steps:['步驟1：將巧克力與奶油隔水加熱至融化，攪拌均勻。','步驟2：加入糖與雞蛋攪拌，最後加入麵粉攪拌均勻。','步驟3：將麵糊倒入烤盤，預熱烤箱至180°C，烤25-30分鐘。'] },
+        5: { title:'杯子蛋糕 Cup cake', ingredients:['低筋麵粉150克','細砂糖100克','無鹽奶油100克','蛋2顆','鮮奶油50ml'], steps:['步驟1：將奶油與糖打發，加入雞蛋繼續打發。','步驟2：加入麵粉，攪拌均勻。','步驟3：將麵糊放入杯子蛋糕模具中，烤約15-20分鐘。'] },
+        6: { title:'蛋塔 Egg tart', ingredients:['酥皮200克','雞蛋3顆','砂糖100克','鮮奶油150ml'], steps:['步驟1：將酥皮放入塔模中，預熱烤箱至180°C。','步驟2：將雞蛋與糖混合，加入鮮奶油攪拌均勻。','步驟3：將蛋液倒入酥皮中，烤20-25分鐘。'] },
+        7: { title:'焦糖烤布丁 Crème Caramel', ingredients:['鮮奶油200ml','雞蛋2顆','砂糖100克','香草精1小匙'], steps:['步驟1：將糖加熱至溶解變成焦糖，倒入烤盅中。','步驟2：將鮮奶油與雞蛋攪拌均勻，加入香草精。','步驟3：倒入焦糖中，預熱烤箱至160°C，烤40-45分鐘。'] },
+        8: { title:'鬆餅 Pancake', ingredients:['低筋麵粉200克','鮮奶油100ml','雞蛋1顆','牛奶100ml','糖50克'], steps:['步驟1：將所有食材混合攪拌均勻，至麵糊無顆粒。','步驟2：熱鍋後，倒入適量麵糊，煎至兩面金黃色即可。'] }
+      };
+
+      function openModal(id) {
+        const r = recipes[id];
+        document.getElementById('modalTitle').innerText = r.title;
+
+        // 食材部分有勾選框
+        document.getElementById('ingredients').innerHTML = r.ingredients.map(i => 
+          `<li><input type="checkbox"> ${i}</li>`
+        ).join('');
+
+        // 步驟部分只顯示文字
+        document.getElementById('steps').innerHTML = r.steps.map(s => 
+          `<p>${s}</p>`
+        ).join('');
+
+        document.getElementById('recipeModal').style.display = 'block';
+      }
+
+      function closeModal() {
+        document.getElementById('recipeModal').style.display = 'none';
+      }
+    </script>
+  </body>
+</html>
+
